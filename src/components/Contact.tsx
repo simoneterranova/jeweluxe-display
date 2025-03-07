@@ -12,6 +12,7 @@ const Contact = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0');
             observer.unobserve(entry.target);
           }
         });
@@ -29,8 +30,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contatti" className="section-padding bg-cream-light relative">
-      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white/70 to-transparent"></div>
+    <section id="contatti" className="section-padding bg-gradient-cream relative">
+      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-cream-light/30 to-transparent"></div>
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -41,7 +42,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           <div 
             ref={formRef} 
-            className="glass p-8 rounded-2xl transition-opacity duration-500"
+            className="glass p-8 rounded-2xl opacity-0 transition-opacity duration-500"
           >
             <h3 className="font-playfair text-2xl text-slate-800 mb-6">Inviaci un messaggio</h3>
             <form className="space-y-6">
@@ -52,7 +53,7 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
-                      className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
+                      className="w-full bg-white border border-slate-200 focus:border-gold/50 rounded-md p-3 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
                       placeholder="Il tuo nome"
                     />
                   </div>
@@ -61,7 +62,7 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
+                      className="w-full bg-white border border-slate-200 focus:border-gold/50 rounded-md p-3 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
                       placeholder="La tua email"
                     />
                   </div>
@@ -71,7 +72,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
-                    className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
+                    className="w-full bg-white border border-slate-200 focus:border-gold/50 rounded-md p-3 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
                     placeholder="Oggetto del messaggio"
                   />
                 </div>
@@ -80,7 +81,7 @@ const Contact = () => {
                   <textarea
                     id="message"
                     rows={5}
-                    className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
+                    className="w-full bg-white border border-slate-200 focus:border-gold/50 rounded-md p-3 text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
                     placeholder="Il tuo messaggio..."
                   ></textarea>
                 </div>
@@ -97,11 +98,11 @@ const Contact = () => {
 
           <div 
             ref={addressRef} 
-            className="flex flex-col justify-between transition-opacity duration-500"
+            className="flex flex-col justify-between opacity-0 transition-opacity duration-500"
           >
             <div>
               <h3 className="font-playfair text-2xl text-slate-800 mb-6">Informazioni di Contatto</h3>
-              <p className="text-slate-700 mb-8">
+              <p className="text-slate-600 mb-8">
                 Siamo lieti di assistere personalmente ogni cliente. Non esitare a contattarci 
                 per qualsiasi informazione o per fissare un appuntamento per una consulenza personalizzata.
               </p>
@@ -113,7 +114,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Indirizzo</h4>
-                    <p className="text-slate-700">Via Pellico Silvio, 2, 97013 COMISO (RG)</p>
+                    <p className="text-slate-600">Via Pellico Silvio, 2, 97013 COMISO (RG)</p>
                   </div>
                 </div>
 
@@ -123,7 +124,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Telefono</h4>
-                    <p className="text-slate-700">0932 723553</p>
+                    <p className="text-slate-600">0932 723553</p>
                   </div>
                 </div>
 
@@ -133,7 +134,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Email</h4>
-                    <p className="text-slate-700">info@ravalli-gioielli.it</p>
+                    <p className="text-slate-600">info@ravalli-gioielli.it</p>
                   </div>
                 </div>
 
@@ -143,7 +144,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Orari di Apertura</h4>
-                    <p className="text-slate-700">
+                    <p className="text-slate-600">
                       Lun - Ven: 9:00 - 13:00, 16:00 - 20:00<br />
                       Sabato: 9:00 - 13:00, 16:00 - 19:00<br />
                       Domenica: Chiuso
@@ -153,12 +154,12 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass mt-12 p-4 rounded-xl overflow-hidden h-[300px] shadow-lg border border-gold/10">
+            <div className="glass mt-12 p-4 rounded-xl overflow-hidden h-[300px] shadow-sm border border-gold/10">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.6570374103053!2d14.602901975586835!3d36.946361972205686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311a3a970415555%3A0x974aaae6f52c6794!2sVia%20Silvio%20Pellico%2C%202%2C%2097013%20Comiso%20RG!5e0!3m2!1sit!2sit!4v1741374345416!5m2!1sit!2sit" 
                 width="100%" 
                 height="100%" 
-                style={{ border: 0.0 }} 
+                style={{ border: 0 }} 
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
