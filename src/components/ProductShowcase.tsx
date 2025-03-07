@@ -59,6 +59,7 @@ const ProductShowcase = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-slide-up');
+            entry.target.classList.remove('opacity-0');
             observer.unobserve(entry.target);
           }
         });

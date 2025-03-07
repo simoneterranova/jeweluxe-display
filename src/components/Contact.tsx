@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
@@ -12,6 +11,7 @@ const Contact = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
+            entry.target.classList.remove('opacity-0');
             observer.unobserve(entry.target);
           }
         });
@@ -30,7 +30,6 @@ const Contact = () => {
 
   return (
     <section id="contatti" className="section-padding bg-gradient-dark relative">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-navy-light/30 to-transparent"></div>
       
       <div className="container mx-auto relative z-10">
@@ -40,10 +39,9 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-          {/* Contact Form */}
           <div 
             ref={formRef} 
-            className="glass p-8 rounded-2xl opacity-0"
+            className="glass p-8 rounded-2xl opacity-0 transition-opacity duration-500"
           >
             <h3 className="font-playfair text-2xl text-white mb-6">Inviaci un messaggio</h3>
             <form className="space-y-6">
@@ -97,10 +95,9 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
           <div 
             ref={addressRef} 
-            className="flex flex-col justify-between opacity-0"
+            className="flex flex-col justify-between opacity-0 transition-opacity duration-500"
           >
             <div>
               <h3 className="font-playfair text-2xl text-white mb-6">Informazioni di Contatto</h3>
@@ -156,7 +153,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div className="glass mt-12 p-4 rounded-xl h-[200px] flex items-center justify-center">
               <p className="text-white/60 text-center">
                 Mappa di Google integrata qui

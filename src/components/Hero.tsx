@@ -15,16 +15,19 @@ const Hero = () => {
 
     if (title) {
       title.classList.add('animate-fade-in');
+      title.classList.remove('opacity-0');
       title.style.animationDelay = '300ms';
     }
 
     if (subtitle) {
       subtitle.classList.add('animate-fade-in');
+      subtitle.classList.remove('opacity-0');
       subtitle.style.animationDelay = '600ms';
     }
 
     if (cta) {
       cta.classList.add('animate-fade-in');
+      cta.classList.remove('opacity-0');
       cta.style.animationDelay = '900ms';
     }
   }, []);

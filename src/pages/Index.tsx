@@ -16,10 +16,12 @@ const Index = () => {
       if (hash) {
         const element = document.querySelector(hash);
         if (element) {
-          window.scrollTo({
-            top: element.getBoundingClientRect().top + window.scrollY - 100, // Offset to account for fixed header
-            behavior: 'smooth'
-          });
+          setTimeout(() => {
+            window.scrollTo({
+              top: element.getBoundingClientRect().top + window.scrollY - 100,
+              behavior: 'smooth'
+            });
+          }, 100); // Small delay to ensure the page is fully loaded
         }
       }
     };
@@ -30,8 +32,23 @@ const Index = () => {
     // Add event listener for hash changes
     window.addEventListener('hashchange', handleHashChange);
 
+    // Handle navigation link clicks
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = (link as HTMLAnchorElement).getAttribute('href');
+        if (href) {
+          window.location.hash = href;
+        }
+      });
+    });
+
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
+      navLinks.forEach(link => {
+        link.removeEventListener('click', () => {});
+      });
     };
   }, []);
 
