@@ -65,30 +65,18 @@ export default {
         },
         gold: {
           light: '#d4af37',
-          DEFAULT: '#b8860b',
-          dark: '#85630b'
+          DEFAULT: '#c9a227',
+          dark: '#b8860b'
         },
         cream: {
-          light: '#faf8f1',
-          DEFAULT: '#f8f5ed',
-          dark: '#efe9db'
+          light: '#f8f5f0',
+          DEFAULT: '#f2ede4',
+          dark: '#e8e0d0'
         },
         slate: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        },
-        navy: {
-          light: '#1f2b3e',
-          DEFAULT: '#0f1729',
-          dark: '#080d19'
+          light: '#6e7c91',
+          DEFAULT: '#4a5568',
+          dark: '#2d3748'
         },
         bronze: {
           light: '#cd7f32',
@@ -165,9 +153,9 @@ export default {
         'shimmer': 'shimmer 3s ease-in-out infinite'
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(135deg, #b88a44 0%, #ffd700 50%, #b88a44 100%)',
-        'gradient-cream': 'linear-gradient(to bottom, rgba(248, 245, 237, 0.8), rgba(239, 233, 219, 1))',
-        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #c9a227 0%, #d4af37 50%, #c9a227 100%)',
+        'gradient-light': 'linear-gradient(to bottom, rgba(242, 237, 228, 0.8), rgba(248, 245, 240, 1))',
+        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)',
       },
     }
   },
