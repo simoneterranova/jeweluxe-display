@@ -8,33 +8,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 40 30% 96%;
+    --foreground: 240 10% 20%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 40 30% 99%;
+    --card-foreground: 240 10% 20%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 240 10% 20%;
 
-    --primary: 41 100% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 32 75% 50%;
+    --primary-foreground: 40 30% 99%;
 
-    --secondary: 217 33% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 40 10% 90%;
+    --secondary-foreground: 240 10% 20%;
 
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 41 100% 45%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 32 75% 50%;
+    --accent-foreground: 40 30% 99%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 30% 99%;
 
-    --border: 217 33% 20%;
-    --input: 217 33% 18%;
-    --ring: 41 100% 45%;
+    --border: 40 10% 85%;
+    --input: 40 10% 90%;
+    --ring: 32 75% 50%;
 
     --radius: 0.5rem;
   }
@@ -45,19 +45,19 @@
   }
 
   body {
-    @apply bg-navy text-foreground font-sans antialiased;
+    @apply bg-cream text-foreground font-sans antialiased;
   }
 
   .glass {
-    @apply bg-navy-light/30 backdrop-blur-md border border-white/10 rounded-lg;
+    @apply bg-white/80 backdrop-blur-md border border-gold/20 rounded-lg shadow-md;
   }
 
   .glass-gold {
-    @apply bg-gold/10 backdrop-blur-md border border-gold/20 rounded-lg;
+    @apply bg-gold/10 backdrop-blur-md border border-gold/30 rounded-lg shadow-md;
   }
 
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .gold-underline {
@@ -65,7 +65,7 @@
   }
 
   .gold-shimmer {
-    background: linear-gradient(90deg, #b88a44, #ffd700, #b88a44);
+    background: linear-gradient(90deg, #b88a44, #d4af37, #b88a44);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -75,15 +75,15 @@
 
 @layer components {
   .btn-gold {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-navy-dark transition-all bg-gradient-gold rounded-md shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white transition-all bg-gradient-gold rounded-md shadow-md hover:shadow-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50;
   }
 
   .section-title {
-    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white;
+    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800;
   }
 
   .section-subtitle {
-    @apply font-playfair text-xl md:text-2xl text-gold/90 mb-12;
+    @apply font-playfair text-xl md:text-2xl text-gold mb-12;
   }
 
   .marquee {
