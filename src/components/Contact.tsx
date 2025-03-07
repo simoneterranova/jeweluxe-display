@@ -158,7 +158,7 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.6570374103053!2d14.602901975586835!3d36.946361972205686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311a3a970415555%3A0x974aaae6f52c6794!2sVia%20Silvio%20Pellico%2C%202%2C%2097013%20Comiso%20RG!5e0!3m2!1sit!2sit!4v1741374345416!5m2!1sit!2sit" 
                 width="100%" 
                 height="100%" 
-                style={{ border: 0 }} 
+                style={{ border: 0.0 }} 
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
