@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
   const addressRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
