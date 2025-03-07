@@ -46,6 +46,7 @@ const About = () => {
             </div>
           </div>
 
+
           {/* Text side */}
           <div className="reveal opacity-0" style={{ transitionDelay: '300ms' }}>
             <h2 className="section-title">Chi Siamo</h2>
@@ -54,17 +55,13 @@ const About = () => {
             </p>
             <div className="space-y-6 text-white/80">
               <p>
-                Ravalli Mirella & Iosella S.n.c. è una storica gioielleria italiana fondata nel 1975 a Comiso. 
-                La nostra passione per l'arte orafa e l'attenzione ai dettagli ci ha permesso di creare gioielli che 
-                rappresentano l'eccellenza dell'artigianato italiano.
+                Nel nostro laboratorio, ogni gioiello nasce da un percorso unico e personalizzato: accogliamo i nostri clienti, ascoltiamo le loro esigenze e disegniamo insieme il progetto, che poi realizziamo interamente a mano. Lavoriamo l’oro con strumenti tradizionali – lime, archetto, cannello a fiato – seguendo un metodo artigianale che rievoca le tecniche di cinquant’anni fa, senza l’uso di stampini o impianti di fusione.
               </p>
               <p>
-                Ogni nostro pezzo racconta una storia di dedizione, creatività e maestria, tramandando valori e tecniche 
-                di lavorazione che si sono perfezionate nel corso di generazioni.
+                La nostra dedizione e la cura per ogni dettaglio ci hanno permesso di ricevere numerosi riconoscimenti, tra cui il primo premio al concorso biennale di oreficeria di Guardiagrele, un traguardo che testimonia il valore e l’unicità delle nostre creazioni.
               </p>
               <p>
-                Il nostro laboratorio unisce sapientemente tradizione e innovazione, creando gioielli che non sono semplici 
-                accessori, ma vere opere d'arte da indossare, destinate a diventare cimeli di famiglia.
+                In ogni pezzo, si riflette non solo l’abilità tecnica, ma soprattutto il rapporto di fiducia instaurato con chi ci sceglie. Siamo orgogliose di trasformare il desiderio in arte, creando gioielli esclusivi che raccontano storie uniche e personali.
               </p>
             </div>
 
