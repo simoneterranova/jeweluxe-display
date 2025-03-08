@@ -8,32 +8,32 @@
 
 @layer base {
   :root {
-    --background: 30 30% 96%;
-    --foreground: 222 47% 11%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 41 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 217 33% 18%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 93%;
-    --muted-foreground: 215 25% 35%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
 
     --accent: 41 100% 45%;
-    --accent-foreground: 222 47% 11%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 10% 80%;
-    --input: 30 10% 90%;
+    --border: 217 33% 20%;
+    --input: 217 33% 18%;
     --ring: 41 100% 45%;
 
     --radius: 0.5rem;
@@ -45,11 +45,11 @@
   }
 
   body {
-    @apply bg-cream text-slate-800 font-sans antialiased;
+    @apply bg-navy text-foreground font-sans antialiased;
   }
 
   .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/40 rounded-lg shadow-md;
+    @apply bg-navy-light/30 backdrop-blur-md border border-white/10 rounded-lg;
   }
 
   .glass-gold {
@@ -57,7 +57,7 @@
   }
 
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .gold-underline {
@@ -75,11 +75,11 @@
 
 @layer components {
   .btn-gold {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white transition-all bg-gradient-gold rounded-md shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-navy-dark transition-all bg-gradient-gold rounded-md shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50;
   }
 
   .section-title {
-    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800;
+    @apply font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white;
   }
 
   .section-subtitle {
