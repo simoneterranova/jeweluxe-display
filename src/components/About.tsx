@@ -35,7 +35,7 @@ const About = () => {
           <div className="relative reveal opacity-0" style={{ transitionDelay: '300ms' }}>
             <div className="rounded-2xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581974944026-5d6ed762f617?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+                src="https://livesicilia.it/wp-content/uploads/2022/03/photo1647852268.jpeg?w=648&h=340&crop=1" 
                 alt="Artigiani al lavoro" 
                 className="w-full h-full object-cover"
               />
