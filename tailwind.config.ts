@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,10 +12,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "2rem",
       screens: {
-        '2xl': '1400px'
-      }
+        "2xl": "1400px",
+      },
     },
     extend: {
       colors: {
@@ -27,11 +26,11 @@ export default {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+          foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
+          foreground: 'hsl(var(--secondary-foreground))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -68,16 +67,11 @@ export default {
           DEFAULT: '#b8860b',
           dark: '#85630b'
         },
-        navy: {
-          light: '#1f2b3e',
-          DEFAULT: '#0f1729',
-          dark: '#080d19'
-        },
-        bronze: {
-          light: '#cd7f32',
-          DEFAULT: '#b56c1d',
-          dark: '#8b4513'
-        },
+        cream: {
+          light: '#FFFAF3',
+          DEFAULT: '#FDF5E6',
+          dark: '#F5E6D3'
+        }
       },
       fontFamily: {
         'playfair': ['"Playfair Display"', 'serif'],
