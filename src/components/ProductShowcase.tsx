@@ -25,14 +25,14 @@ const ProductShowcase = () => {
       id: 3,
       name: 'Bracciale Zaffiro',
       description: 'Elegante bracciale tennis con zaffiri blu e diamanti su platino.',
-      image: 'https://images.unsplash.com/photo-1620316113820-9f4e2d16e9ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: 'https://imgs.search.brave.com/xfKhX861al5nb2tkrG1pitGZnMTFlh0qizEavE4Rq8o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmlhY29uZG90dGlz/dG9yZS5jb20vY2Ru/L3Nob3AvZmlsZXMv/YnJhY2NpYWxlLWRh/LWRvbm5hLWluLWFy/Z2VudG8temlyY29u/aS1iaWFuY2hpLWUt/Ymx1LXRpcG8temFm/ZmlyaS12aWEtY29u/ZG90dGktc3RvcmUu/anBnP3Y9MTY4NjE1/OTM3OSZ3aWR0aD0x/MDgw',
       category: 'Bracciali'
     },
     {
       id: 4,
       name: 'Orecchini Rubino',
       description: 'Splendidi orecchini pendenti con rubini birmani e pavé di diamanti.',
-      image: 'https://images.unsplash.com/photo-1633810253710-aebc54ea866c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: 'https://imgs.search.brave.com/h_8Ikl8VwVQY-_jJYHLBss_VEYTeWeSAGBqHvhmDQ-c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/MGJyYW5kY29tbWVy/Y2UuY29tL21hYmlu/YS9wcmQvNDI2NV8y/X00uanBn',
       category: 'Orecchini'
     },
   ];
