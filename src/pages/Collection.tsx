@@ -81,7 +81,7 @@ const Collection = () => {
       id: 8,
       name: 'Orecchini Perla',
       description: 'Classici orecchini con perle Akoya e piccoli diamanti su montatura in oro bianco.',
-      image: 'https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: 'https://imgs.search.brave.com/OnOW7v6T1H1X6WCUtpyv74NiZMyI2SGzc_zKBWXIYo4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wdXJl/bGVpLmNvbS9jZG4v/c2hvcC9maWxlcy9z/aG9wXzAwMDFfMjMx/Ml9QZXJsZW5zdGVj/a2VyX0ZsYXRsYXkt/MS5qcGc_dj0xNzIx/ODI0MDg5JndpZHRo/PTMwMDA',
       category: 'Orecchini',
       price: '€1,950'
     },
