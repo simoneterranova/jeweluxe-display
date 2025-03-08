@@ -1,6 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProductShowcase = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -169,9 +170,9 @@ const ProductShowcase = () => {
         </div>
 
         <div className="text-center mt-10">
-          <a href="#" className="btn-gold">
+          <Link to="/collection" className="btn-gold">
             Visualizza Tutta la Collezione
-          </a>
+          </Link>
         </div>
       </div>
     </section>
