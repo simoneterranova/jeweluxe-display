@@ -42,7 +42,7 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section id="testimonial" className="section-padding bg-navy relative overflow-hidden">
+    <section id="testimonial" className="section-padding bg-cream relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-24 h-24 rounded-full bg-gold/5 blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-gold/5 blur-3xl"></div>
@@ -81,13 +81,13 @@ const Testimonials = () => {
                         <Star key={i} className="h-5 w-5 fill-gold text-gold" />
                       ))}
                     </div>
-                    <blockquote className="text-white/90 text-lg md:text-xl italic mb-6 font-playfair">
+                    <blockquote className="text-slate-800 text-lg md:text-xl italic mb-6 font-playfair">
                       "{testimonial.quote}"
                     </blockquote>
                     <div className="flex items-center">
                       <div>
-                        <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                        <p className="text-gold/80 text-sm">{testimonial.role}</p>
+                        <h4 className="text-slate-800 font-semibold">{testimonial.name}</h4>
+                        <p className="text-gold-dark text-sm">{testimonial.role}</p>
                       </div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@ const Testimonials = () => {
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  idx === activeIndex ? 'bg-gold w-8' : 'bg-white/20'
+                  idx === activeIndex ? 'bg-gold w-8' : 'bg-slate-400'
                 }`}
                 aria-label={`Go to testimonial ${idx + 1}`}
               />

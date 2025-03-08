@@ -79,7 +79,7 @@ const ProductShowcase = () => {
   }, []);
 
   return (
-    <section id="collezione" className="section-padding bg-gradient-dark">
+    <section id="collezione" className="section-padding bg-cream-dark">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">La Nostra Collezione</h2>
@@ -88,19 +88,19 @@ const ProductShowcase = () => {
 
         {/* Category Pills */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button className="px-6 py-2 rounded-full bg-gold text-navy-dark font-medium transition-all hover:scale-105">
+          <button className="px-6 py-2 rounded-full bg-gold text-white font-medium transition-all hover:scale-105">
             Tutti
           </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-white hover:bg-gold/10 transition-all">
+          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
             Anelli
           </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-white hover:bg-gold/10 transition-all">
+          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
             Collane
           </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-white hover:bg-gold/10 transition-all">
+          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
             Bracciali
           </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-white hover:bg-gold/10 transition-all">
+          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
             Orecchini
           </button>
         </div>
@@ -119,23 +119,23 @@ const ProductShowcase = () => {
               >
                 <div className="glass h-full overflow-hidden rounded-xl group">
                   <div className="relative h-80 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-dark/80 z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/50 z-10"></div>
                     <img 
                       src={product.image} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute bottom-4 left-4 z-20">
-                      <span className="px-3 py-1 bg-gold/90 text-navy-dark text-xs font-medium rounded-full">
+                      <span className="px-3 py-1 bg-gold/90 text-white text-xs font-medium rounded-full">
                         {product.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-playfair text-xl font-semibold text-white mb-2">
+                    <h3 className="font-playfair text-xl font-semibold text-slate-800 mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-white/70 text-sm mb-4">
+                    <p className="text-slate-700 text-sm mb-4">
                       {product.description}
                     </p>
                     <a 
@@ -154,14 +154,14 @@ const ProductShowcase = () => {
           {/* Navigation buttons */}
           <button 
             onClick={() => scroll('left')}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-navy-dark/80 text-white hover:text-gold hover:bg-navy-dark/90 transition-all"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 text-slate-800 hover:text-gold hover:bg-white/90 transition-all shadow-md"
             aria-label="Precedente"
           >
             <ArrowLeft className="h-5 w-5" />
           </button>
           <button 
             onClick={() => scroll('right')}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-navy-dark/80 text-white hover:text-gold hover:bg-navy-dark/90 transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 text-slate-800 hover:text-gold hover:bg-white/90 transition-all shadow-md"
             aria-label="Successivo"
           >
             <ArrowRight className="h-5 w-5" />
