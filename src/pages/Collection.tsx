@@ -57,7 +57,7 @@ const Collection = () => {
       id: 5,
       name: 'Anello Smeraldo',
       description: 'Magnifico anello con smeraldo colombiano centrale e diamanti a contorno.',
-      image: 'https://images.unsplash.com/photo-1586104195538-050bf531a9af?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: 'https://imgs.search.brave.com/G-SqgtxO7wSQsSDy1ydz8gj2Pqw7E7Hp_CMDf9GEtno/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2Nlcm1pbm9naW9p/ZWxsaS5pdC9pbWcv/Y21zL0ZvdG8tQ2F0/ZWdvcmllL0FuZWxs/by1TbWVyYWxkby5q/cGc',
       category: 'Anelli',
       price: '€5,200'
     },
