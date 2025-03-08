@@ -78,6 +78,23 @@ export default {
           DEFAULT: '#b56c1d',
           dark: '#8b4513'
         },
+        cream: {
+          light: '#FFF8E7',
+          DEFAULT: '#F9F3E5',
+          dark: '#EFE8D9'
+        },
+        slate: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a'
+        }
       },
       fontFamily: {
         'playfair': ['"Playfair Display"', 'serif'],
@@ -149,8 +166,8 @@ export default {
       },
       backgroundImage: {
         'gradient-gold': 'linear-gradient(135deg, #b88a44 0%, #ffd700 50%, #b88a44 100%)',
-        'gradient-dark': 'linear-gradient(to bottom, rgba(15, 23, 41, 0.8), rgba(8, 13, 25, 1))',
-        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%)',
+        'gradient-light': 'linear-gradient(to bottom, rgba(249, 243, 229, 0.8), rgba(239, 232, 217, 1))',
+        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)',
       },
     }
   },
