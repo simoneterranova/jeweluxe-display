@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -7,34 +8,34 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 20 6% 20%;
-    
-    --card: 40 33% 98%;
-    --card-foreground: 20 6% 20%;
-    
-    --popover: 40 33% 98%;
-    --popover-foreground: 20 6% 20%;
-    
-    --primary: 41 100% 45%;
-    --primary-foreground: 40 33% 98%;
-    
-    --secondary: 40 20% 92%;
-    --secondary-foreground: 20 6% 20%;
-    
-    --muted: 40 20% 92%;
-    --muted-foreground: 20 6% 40%;
-    
-    --accent: 41 100% 45%;
-    --accent-foreground: 40 33% 98%;
-    
+    --background: 40 30% 96%;
+    --foreground: 240 10% 20%;
+
+    --card: 40 30% 99%;
+    --card-foreground: 240 10% 20%;
+
+    --popover: 40 30% 99%;
+    --popover-foreground: 240 10% 20%;
+
+    --primary: 32 75% 50%;
+    --primary-foreground: 40 30% 99%;
+
+    --secondary: 40 10% 90%;
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 40 10% 90%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 32 75% 50%;
+    --accent-foreground: 40 30% 99%;
+
     --destructive: 0 63% 31%;
-    --destructive-foreground: 40 33% 98%;
-    
-    --border: 20 6% 80%;
-    --input: 20 6% 80%;
-    --ring: 41 100% 45%;
-    
+    --destructive-foreground: 40 30% 99%;
+
+    --border: 40 10% 85%;
+    --input: 40 10% 90%;
+    --ring: 32 75% 50%;
+
     --radius: 0.5rem;
   }
 
@@ -44,19 +45,19 @@
   }
 
   body {
-    @apply bg-cream text-slate-800 font-sans antialiased;
+    @apply bg-cream text-foreground font-sans antialiased;
   }
 
   .glass {
-    @apply bg-white/90 backdrop-blur-sm border border-white/20 shadow-lg rounded-lg;
+    @apply bg-white/80 backdrop-blur-md border border-gold/20 rounded-lg shadow-md;
   }
 
   .glass-gold {
-    @apply bg-gold/5 backdrop-blur-sm border border-gold/20 shadow-lg rounded-lg;
+    @apply bg-gold/10 backdrop-blur-md border border-gold/30 rounded-lg shadow-md;
   }
 
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 
   .gold-underline {
@@ -64,7 +65,7 @@
   }
 
   .gold-shimmer {
-    background: linear-gradient(90deg, #b88a44, #ffd700, #b88a44);
+    background: linear-gradient(90deg, #b88a44, #d4af37, #b88a44);
     background-size: 200% auto;
     -webkit-background-clip: text;
     color: transparent;
@@ -74,7 +75,7 @@
 
 @layer components {
   .btn-gold {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-cream bg-gradient-gold rounded-md shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white transition-all bg-gradient-gold rounded-md shadow-md hover:shadow-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold/50;
   }
 
   .section-title {
@@ -83,6 +84,14 @@
 
   .section-subtitle {
     @apply font-playfair text-xl md:text-2xl text-gold mb-12;
+  }
+
+  .marquee {
+    @apply overflow-hidden whitespace-nowrap;
+  }
+
+  .marquee-content {
+    @apply inline-block animate-[marquee_25s_linear_infinite];
   }
 
   .section-padding {

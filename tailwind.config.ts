@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,10 +13,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        "2xl": "1400px",
-      },
+        '2xl': '1400px'
+      }
     },
     extend: {
       colors: {
@@ -26,11 +27,11 @@ export default {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -64,14 +65,24 @@ export default {
         },
         gold: {
           light: '#d4af37',
-          DEFAULT: '#b8860b',
-          dark: '#85630b'
+          DEFAULT: '#c9a227',
+          dark: '#b8860b'
         },
         cream: {
-          light: '#FFFAF3',
-          DEFAULT: '#FDF5E6',
-          dark: '#F5E6D3'
-        }
+          light: '#f8f5f0',
+          DEFAULT: '#f2ede4',
+          dark: '#e8e0d0'
+        },
+        slate: {
+          light: '#6e7c91',
+          DEFAULT: '#4a5568',
+          dark: '#2d3748'
+        },
+        bronze: {
+          light: '#cd7f32',
+          DEFAULT: '#b56c1d',
+          dark: '#8b4513'
+        },
       },
       fontFamily: {
         'playfair': ['"Playfair Display"', 'serif'],
@@ -142,9 +153,9 @@ export default {
         'shimmer': 'shimmer 3s ease-in-out infinite'
       },
       backgroundImage: {
-        'gradient-gold': 'linear-gradient(135deg, #b88a44 0%, #ffd700 50%, #b88a44 100%)',
-        'gradient-dark': 'linear-gradient(to bottom, rgba(15, 23, 41, 0.8), rgba(8, 13, 25, 1))',
-        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #c9a227 0%, #d4af37 50%, #c9a227 100%)',
+        'gradient-light': 'linear-gradient(to bottom, rgba(242, 237, 228, 0.8), rgba(248, 245, 240, 1))',
+        'hero-overlay': 'linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%)',
       },
     }
   },
