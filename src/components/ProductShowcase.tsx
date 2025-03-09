@@ -83,27 +83,8 @@ const ProductShowcase = () => {
     <section id="collezione" className="section-padding bg-cream-dark">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">La Nostra Collezione</h2>
-          <p className="section-subtitle">Pezzi unici creati con maestria artigianale</p>
-        </div>
-
-        {/* Category Pills */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button className="px-6 py-2 rounded-full bg-gold text-white font-medium transition-all hover:scale-105">
-            Tutti
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Anelli
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Collane
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Bracciali
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Orecchini
-          </button>
+          <h2 className="section-title">Le Nostre Creazioni</h2>
+          <p className="section-subtitle">Gioielli unici realizzati a mano con cura</p>
         </div>
 
         {/* Product carousel */}

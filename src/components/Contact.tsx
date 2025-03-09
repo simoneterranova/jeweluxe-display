@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
@@ -109,31 +108,48 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
-                    <MapPin className="h-5 w-5 text-gold" />
+                    <a 
+                      href="https://www.google.com/maps?q=Via+Pellico+Silvio,+2,+97013+COMISO+RG" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <MapPin className="h-5 w-5 text-gold" />
+                    </a>
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Indirizzo</h4>
-                    <p className="text-slate-700">Via Pellico Silvio, 2, 97013 COMISO (RG)</p>
+                    <a 
+                      href="https://www.google.com/maps?q=Via+Pellico+Silvio,+2,+97013+COMISO+RG" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-slate-700"
+                    >
+                      Via Pellico Silvio, 2, 97013 COMISO (RG)
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
-                    <Phone className="h-5 w-5 text-gold" />
+                    <a href="tel:0932723553">
+                      <Phone className="h-5 w-5 text-gold" />
+                    </a>
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Telefono</h4>
-                    <p className="text-slate-700">0932 723553</p>
+                    <a href="tel:0932723553" className="text-slate-700">0932 723553</a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mt-1">
-                    <Mail className="h-5 w-5 text-gold" />
+                    <a href="mailto:info@ravalli-gioielli.it">
+                      <Mail className="h-5 w-5 text-gold" />
+                    </a>
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Email</h4>
-                    <p className="text-slate-700">info@ravalli-gioielli.it</p>
+                    <a href="mailto:info@ravalli-gioielli.it" className="text-slate-700">info@ravalli-gioielli.it</a>
                   </div>
                 </div>
 
