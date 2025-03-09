@@ -2,13 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,34 +16,12 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSectionClick = (href: string) => {
-    setMobileMenuOpen(false);
-    
-    if (href.startsWith('/#')) {
-      const sectionId = href.replace('/#', '');
-      
-      // If we're already on the home page, just scroll to the section
-      if (location.pathname === '/') {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
-        // If we're on another page, navigate to home and then scroll
-        navigate('/', { state: { scrollTo: sectionId } });
-      }
-    } else {
-      // Regular navigation
-      navigate(href);
-    }
-  };
-
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Collezione', href: '/collection' },
-    { label: 'Chi Siamo', href: '/#chi-siamo' },
-    { label: 'Testimonial', href: '/#testimonial' },
-    { label: 'Contatti', href: '/#contatti' },
+    { label: 'Home', href: '#home' },
+    { label: 'Collezione', href: '#collezione' },
+    { label: 'Chi Siamo', href: '#chi-siamo' },
+    { label: 'Testimonial', href: '#testimonial' },
+    { label: 'Contatti', href: '#contatti' },
   ];
 
   return (
@@ -58,27 +33,27 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="z-50">
+        <a href="#home" className="z-50">
           <h1 className="font-playfair text-2xl font-bold text-gold-dark">Ravalli</h1>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.href}
-              onClick={() => handleSectionClick(item.href)}
+              href={item.href}
               className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
             >
               {item.label}
-            </button>
+            </a>
           ))}
-          <button
-            onClick={() => handleSectionClick('/#contatti')}
+          <a
+            href="#contatti"
             className="btn-gold"
           >
             Contattaci
-          </button>
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -103,20 +78,22 @@ const Header = () => {
         >
           <nav className="flex flex-col items-center space-y-8 w-full px-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
-                onClick={() => handleSectionClick(item.href)}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
-            <button
-              onClick={() => handleSectionClick('/#contatti')}
+            <a
+              href="#contatti"
+              onClick={() => setMobileMenuOpen(false)}
               className="btn-gold mt-4 w-full flex justify-center"
             >
               Contattaci
-            </button>
+            </a>
           </nav>
         </div>
       </div>
