@@ -37,7 +37,7 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/public/lovable-uploads/01cf5c78-afcc-4369-8f58-32c0522eacaf.png')",
+        backgroundImage: "url('https://livesicilia.it/wp-content/uploads/2022/03/qub3-Copia.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
