@@ -71,8 +71,7 @@ export default {
         cream: {
           light: '#f8f5f0',
           DEFAULT: '#f2ede4',
-          dark: '#e8e0d0',
-          darker: '#d8cfc2'
+          dark: '#e8e0d0'
         },
         slate: {
           light: '#6e7c91',
