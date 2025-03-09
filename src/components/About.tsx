@@ -42,7 +42,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-8 -right-8 glass-gold p-6 rounded-xl w-48 reveal opacity-0" style={{ transitionDelay: '600ms' }}>
               <p className="text-gold-dark font-playfair text-lg font-semibold">Dal 1975</p>
-              <p className="text-white text-sm">Tradizione orafa italiana</p>
+              <p className="text-slate-800 text-sm">Tradizione orafa italiana</p>
             </div>
           </div>
 
@@ -54,13 +54,13 @@ const About = () => {
             </p>
             <div className="space-y-6 text-slate-700">
               <p>
-                La nostra attività rappresenta una perla dell'artigianato con oltre trent'anni di storia alle spalle. Abbiamo iniziato quando avevamo appena 21 e 22 anni, dopo aver completato i nostri studi e fatto apprendistato in bottega, dove abbiamo imparato il mestiere stando sedute al banco. Grazie al supporto di nostro padre, abbiamo poi avuto l'opportunità di aprire la nostra attività.
+                Nel nostro laboratorio, ogni gioiello nasce da un percorso unico e personalizzato: accogliamo i nostri clienti, ascoltiamo le loro esigenze e disegniamo insieme il progetto, che poi realizziamo interamente a mano. Lavoriamo l'oro con strumenti tradizionali – lime, archetto, cannello a fiato – seguendo un metodo artigianale che rievoca le tecniche di cinquant'anni fa, senza l'uso di stampini o impianti di fusione.
               </p>
               <p>
-                Non ci definiamo gioielliere, ma artigiane orafe con un laboratorio dedicato alla produzione manuale di pezzi unici. Il nostro approccio è profondamente personale: seguiamo i clienti dal momento in cui entrano in negozio. L'oggetto nasce dalle nostre mani ma, soprattutto, dalla fiducia che si instaura con il cliente. Prepariamo su carta il progetto del gioiello e lo realizziamo in modo esclusivo e unico per quella persona. Ogni creazione è completamente personalizzata.
+                La nostra dedizione e la cura per ogni dettaglio ci hanno permesso di ricevere numerosi riconoscimenti, tra cui il primo premio al concorso biennale di oreficeria di Guardiagrele, un traguardo che testimonia il valore e l'unicità delle nostre creazioni.
               </p>
               <p>
-                Le nostre tecniche sono fedeli alla tradizione: fondiamo l'oro a mano senza stampini né impianti di fusione. I nostri gioielli prendono vita grazie a lima, archetto, cannello a fiato e tutti gli attrezzi tipici del mestiere di cinquant'anni fa, preservando così l'autenticità e la qualità dell'artigianato orafo tradizionale.
+                In ogni pezzo, si riflette non solo l'abilità tecnica, ma soprattutto il rapporto di fiducia instaurato con chi ci sceglie. Siamo orgogliose di trasformare il desiderio in arte, creando gioielli esclusivi che raccontano storie uniche e personali.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ const About = () => {
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '500ms' }}>
                 <h3 className="text-gold-dark font-playfair text-xl mb-3">Artigianalità</h3>
                 <p className="text-slate-700 text-sm">
-                  Ogni gioiello è creato a mano, garantendo unicità e qualità.
+                  Ogni gioiello è creato a mano dai nostri maestri orafi, garantendo unicità e qualità.
                 </p>
               </div>
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '700ms' }}>
