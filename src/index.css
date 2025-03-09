@@ -45,11 +45,11 @@
   }
 
   body {
-    @apply bg-cream text-slate-800 font-sans antialiased;
+    @apply bg-cream text-foreground font-sans antialiased;
   }
 
   .glass {
-    @apply bg-white/90 backdrop-blur-md border border-gold/20 rounded-lg shadow-md;
+    @apply bg-white/80 backdrop-blur-md border border-gold/20 rounded-lg shadow-md;
   }
 
   .glass-gold {

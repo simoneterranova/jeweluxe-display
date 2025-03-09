@@ -42,8 +42,8 @@ const Hero = () => {
         backgroundPosition: 'center'
       }}
     >
-      {/* Overlay gradient with stronger contrast for text visibility */}
-      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      {/* Overlay gradient */}
+      <div className="absolute inset-0 bg-hero-overlay z-10"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-24 relative z-20 text-center">
@@ -56,7 +56,7 @@ const Hero = () => {
           </h2>
           <p 
             ref={subtitleRef} 
-            className="opacity-0 text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto font-medium"
+            className="opacity-0 text-lg md:text-xl text-white/85 mb-12 max-w-2xl mx-auto"
           >
             Da generazioni, creiamo pezzi unici che celebrano l'artigianato italiano e i momenti preziosi della vita.
           </p>
@@ -64,7 +64,7 @@ const Hero = () => {
             <a href="#collezione" className="btn-gold">
               Esplora la Collezione
             </a>
-            <a href="#chi-siamo" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white hover:text-gold transition-colors border border-white/40 hover:border-gold/50 rounded-md">
+            <a href="#chi-siamo" className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white hover:text-gold transition-colors border border-white/20 hover:border-gold/50 rounded-md">
               Scopri la Nostra Storia
             </a>
           </div>
@@ -73,8 +73,8 @@ const Hero = () => {
 
       {/* Scroll down indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <a href="#collezione" className="flex flex-col items-center text-white hover:text-gold transition-colors">
-          <span className="text-sm mb-2 font-medium">Scorri</span>
+        <a href="#collezione" className="flex flex-col items-center text-white/70 hover:text-gold transition-colors">
+          <span className="text-sm mb-2">Scorri</span>
           <ArrowDown className="h-4 w-4" />
         </a>
       </div>
