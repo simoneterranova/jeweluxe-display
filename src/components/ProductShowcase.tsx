@@ -83,8 +83,8 @@ const ProductShowcase = () => {
     <section id="collezione" className="section-padding bg-cream-dark">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">La Nostra Collezione</h2>
-          <p className="section-subtitle">Pezzi unici creati con maestria artigianale</p>
+          <h2 className="section-title">Le Nostre Creazioni</h2>
+          <p className="section-subtitle">Gioielli unici realizzati a mano con cura</p>
         </div>
 
         {/* Product carousel */}
