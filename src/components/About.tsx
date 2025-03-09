@@ -42,7 +42,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-8 -right-8 glass-gold p-6 rounded-xl w-48 reveal opacity-0" style={{ transitionDelay: '600ms' }}>
               <p className="text-gold-dark font-playfair text-lg font-semibold">Dal 1975</p>
-              <p className="text-slate-800 text-sm">Tradizione orafa italiana</p>
+              <p className="text-white text-sm">Tradizione orafa italiana</p>
             </div>
           </div>
 
