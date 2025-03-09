@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +18,11 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Collezione', href: '#collezione' },
-    { label: 'Chi Siamo', href: '#chi-siamo' },
-    { label: 'Testimonial', href: '#testimonial' },
-    { label: 'Contatti', href: '#contatti' },
+    { label: 'Home', href: '/' },
+    { label: 'Collezione', href: '/collection' },
+    { label: 'Chi Siamo', href: '/#chi-siamo' },
+    { label: 'Testimonial', href: '/#testimonial' },
+    { label: 'Contatti', href: '/#contatti' },
   ];
 
   return (
@@ -33,27 +34,37 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="z-50">
+        <Link to="/" className="z-50">
           <h1 className="font-playfair text-2xl font-bold text-gold-dark">Ravalli</h1>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
-            >
-              {item.label}
-            </a>
+            item.href.startsWith('/#') ? (
+              <Link
+                key={item.href}
+                to={item.href.replace('#', '')}
+                className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
+              >
+                {item.label}
+              </Link>
+            )
           ))}
-          <a
-            href="#contatti"
+          <Link
+            to="/#contatti"
             className="btn-gold"
           >
             Contattaci
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -78,22 +89,33 @@ const Header = () => {
         >
           <nav className="flex flex-col items-center space-y-8 w-full px-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('/#') ? (
+                <Link
+                  key={item.href}
+                  to={item.href.replace('#', '')}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
-            <a
-              href="#contatti"
+            <Link
+              to="/#contatti"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-gold mt-4 w-full flex justify-center"
             >
               Contattaci
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
