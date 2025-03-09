@@ -38,7 +38,7 @@ const Footer = () => {
             <h4 className="text-white font-medium mb-6">Servizi</h4>
             <ul className="space-y-3">
               <li>
-                <a href="" className="text-white/90 hover:text-gold transition-colors text-sm">Gioielli Personalizzati</a>
+                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Gioielli Personalizzati</a>
               </li>
               <li>
                 <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Riparazioni</a>
