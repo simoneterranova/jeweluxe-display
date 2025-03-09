@@ -37,38 +37,26 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/lovable-uploads/01cf5c78-afcc-4369-8f58-32c0522eacaf.png')",
+        backgroundImage: "url('/public/lovable-uploads/01cf5c78-afcc-4369-8f58-32c0522eacaf.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
-      {/* Watermark overlay */}
-      <div 
-        className="absolute inset-0 z-10 opacity-15"
-        style={{
-          backgroundImage: "url('https://livesicilia.it/wp-content/uploads/2022/03/qub3-Copia.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay',
-          mixBlendMode: 'soft-light'
-        }}
-      ></div>
-
-      {/* Gradient overlay for improved text visibility */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      {/* Overlay gradient with stronger contrast for text visibility */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 py-24 relative z-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 
             ref={titleRef} 
-            className="opacity-0 font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white text-shadow-lg"
+            className="opacity-0 font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white text-shadow"
           >
             Gioielli che Raccontano <span className="gold-shimmer">Eleganza</span>
           </h2>
           <p 
             ref={subtitleRef} 
-            className="opacity-0 text-lg md:text-xl text-white mb-14 max-w-2xl mx-auto font-medium leading-relaxed tracking-wide"
+            className="opacity-0 text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto font-medium"
           >
             Da generazioni, creiamo pezzi unici che celebrano l'artigianato italiano e i momenti preziosi della vita.
           </p>
