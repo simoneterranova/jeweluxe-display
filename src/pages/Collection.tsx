@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -130,6 +132,17 @@ const Collection = () => {
       
       <main className="pt-32 pb-20 px-4 md:px-8 lg:px-16">
         <div className="container mx-auto">
+          {/* Back button */}
+          <div className="mb-8">
+            <Link 
+              to="/" 
+              className="inline-flex items-center text-slate-800 hover:text-gold transition-colors"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              <span>Torna alla Home</span>
+            </Link>
+          </div>
+          
           {/* Page title */}
           <div className="text-center mb-16">
             <h1 className="section-title">La Nostra Collezione</h1>

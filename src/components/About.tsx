@@ -42,7 +42,7 @@ const About = () => {
             </div>
             <div className="absolute -bottom-8 -right-8 glass-gold p-6 rounded-xl w-48 reveal opacity-0" style={{ transitionDelay: '600ms' }}>
               <p className="text-gold-dark font-playfair text-lg font-semibold">Dal 1975</p>
-              <p className="text-white text-sm">Tradizione orafa italiana</p>
+              <p className="text-slate-800 text-sm">Tradizione orafa italiana</p>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ const About = () => {
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '500ms' }}>
                 <h3 className="text-gold-dark font-playfair text-xl mb-3">Artigianalità</h3>
                 <p className="text-slate-700 text-sm">
-                  Ogni gioiello è creato a mano, garantendo unicità e qualità.
+                  Ogni gioiello è creato a mano dai nostri maestri orafi, garantendo unicità e qualità.
                 </p>
               </div>
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '700ms' }}>
