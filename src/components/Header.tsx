@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -15,12 +16,12 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Updated nav items without the redundant "Contatti"
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'Collezione', href: '#collezione' },
     { label: 'Chi Siamo', href: '#chi-siamo' },
     { label: 'Testimonial', href: '#testimonial' },
+    { label: 'Contatti', href: '#contatti' },
   ];
 
   return (
