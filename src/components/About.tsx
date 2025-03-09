@@ -69,7 +69,7 @@ const About = () => {
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '500ms' }}>
                 <h3 className="text-gold-dark font-playfair text-xl mb-3">Artigianalità</h3>
                 <p className="text-slate-700 text-sm">
-                  Ogni gioiello è creato a mano dai nostri maestri orafi, garantendo unicità e qualità.
+                  Ogni gioiello è creato a mano, garantendo unicità e qualità.
                 </p>
               </div>
               <div className="glass p-6 reveal opacity-0" style={{ transitionDelay: '700ms' }}>
