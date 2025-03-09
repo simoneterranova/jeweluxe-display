@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,28 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSectionClick = (href: string) => {
+    setMobileMenuOpen(false);
+    
+    if (href.startsWith('/#')) {
+      const sectionId = href.replace('/#', '');
+      
+      // If we're already on the home page, just scroll to the section
+      if (location.pathname === '/') {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If we're on another page, navigate to home and then scroll
+        navigate('/', { state: { scrollTo: sectionId } });
+      }
+    } else {
+      // Regular navigation
+      navigate(href);
+    }
+  };
 
   const navItems = [
     { label: 'Home', href: '/' },
@@ -41,30 +65,20 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navItems.map((item) => (
-            item.href.startsWith('/#') ? (
-              <Link
-                key={item.href}
-                to={item.href.replace('#', '')}
-                className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
-              >
-                {item.label}
-              </Link>
-            )
+            <button
+              key={item.href}
+              onClick={() => handleSectionClick(item.href)}
+              className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
+            >
+              {item.label}
+            </button>
           ))}
-          <Link
-            to="/#contatti"
+          <button
+            onClick={() => handleSectionClick('/#contatti')}
             className="btn-gold"
           >
             Contattaci
-          </Link>
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -89,33 +103,20 @@ const Header = () => {
         >
           <nav className="flex flex-col items-center space-y-8 w-full px-8">
             {navItems.map((item) => (
-              item.href.startsWith('/#') ? (
-                <Link
-                  key={item.href}
-                  to={item.href.replace('#', '')}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
-                >
-                  {item.label}
-                </Link>
-              )
+              <button
+                key={item.href}
+                onClick={() => handleSectionClick(item.href)}
+                className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+              >
+                {item.label}
+              </button>
             ))}
-            <Link
-              to="/#contatti"
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              onClick={() => handleSectionClick('/#contatti')}
               className="btn-gold mt-4 w-full flex justify-center"
             >
               Contattaci
-            </Link>
+            </button>
           </nav>
         </div>
       </div>
