@@ -39,7 +39,8 @@ const Hero = () => {
       style={{
         backgroundImage: "url('https://livesicilia.it/wp-content/uploads/2022/03/qub3-Copia.jpg')",
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        filter: 'brightness(130%)'
       }}
     >
       {/* Overlay gradient with stronger contrast for text visibility */}
