@@ -87,25 +87,6 @@ const ProductShowcase = () => {
           <p className="section-subtitle">Pezzi unici creati con maestria artigianale</p>
         </div>
 
-        {/* Category Pills */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button className="px-6 py-2 rounded-full bg-gold text-white font-medium transition-all hover:scale-105">
-            Tutti
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Anelli
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Collane
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Bracciali
-          </button>
-          <button className="px-6 py-2 rounded-full border border-gold/30 text-slate-800 hover:bg-gold/10 transition-all">
-            Orecchini
-          </button>
-        </div>
-
         {/* Product carousel */}
         <div className="relative">
           <div 
