@@ -4,7 +4,7 @@ import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-slate-800 to-slate-900 relative">
+    <footer className="bg-cream-dark relative">
       {/* Gold separator */}
       <div className="h-px w-full bg-gradient-gold"></div>
       
