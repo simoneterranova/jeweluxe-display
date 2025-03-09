@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ProductShowcase from '@/components/ProductShowcase';
@@ -9,57 +10,38 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  // Smooth scroll to sections when clicking on links
+  const location = useLocation();
+
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const element = document.querySelector(hash);
-        if (element) {
-          setTimeout(() => {
-            window.scrollTo({
-              top: element.getBoundingClientRect().top + window.scrollY - 100,
-              behavior: 'smooth'
-            });
-          }, 100); // Small delay to ensure the page is fully loaded
-        }
+    // Check if there's a section to scroll to from navigation
+    if (location.state && location.state.scrollTo) {
+      const sectionId = location.state.scrollTo;
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
       }
-    };
-
-    // Initial check for hash on load
-    handleHashChange();
-
-    // Add event listener for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-
-    // Handle navigation link clicks
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const href = (link as HTMLAnchorElement).getAttribute('href');
-        if (href) {
-          window.location.hash = href;
-        }
-      });
-    });
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-      navLinks.forEach(link => {
-        link.removeEventListener('click', () => {});
-      });
-    };
-  }, []);
+      
+      // Clear the state to avoid scrolling on subsequent renders
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-navy">
       <Header />
       <Hero />
       <ProductShowcase />
-      <About />
-      <Testimonials />
-      <Contact />
+      <section id="chi-siamo">
+        <About />
+      </section>
+      <section id="testimonial">
+        <Testimonials />
+      </section>
+      <section id="contatti">
+        <Contact />
+      </section>
       <Footer />
     </div>
   );
