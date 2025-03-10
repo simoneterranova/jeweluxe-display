@@ -1,10 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +21,24 @@ const Header = () => {
 
   // Updated nav items without the redundant "Contatti"
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Collezione', href: '#collezione' },
-    { label: 'Chi Siamo', href: '#chi-siamo' },
-    { label: 'Testimonial', href: '#testimonial' },
+    { label: 'Home', href: isHomePage ? '#home' : '/' },
+    { label: 'Collezione', href: isHomePage ? '#collezione' : '/collection' },
+    { label: 'Chi Siamo', href: isHomePage ? '#chi-siamo' : '/#chi-siamo' },
+    { label: 'Testimonial', href: isHomePage ? '#testimonial' : '/#testimonial' },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isHomePage && href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    }
+  };
 
   return (
     <header 
@@ -32,27 +49,29 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="z-50">
+        <Link to="/" className="z-50">
           <h1 className="font-playfair text-2xl font-bold text-gold-dark">Ravalli</h1>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
-              href={item.href}
+              to={item.href.startsWith('#') && isHomePage ? item.href.substring(1) : item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="text-slate-800 hover:text-gold transition-colors duration-300 gold-underline text-sm font-medium"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contatti"
+          <Link
+            to={isHomePage ? "#contatti" : "/#contatti"}
+            onClick={(e) => handleNavClick(e, isHomePage ? "#contatti" : "/#contatti")}
             className="btn-gold"
           >
             Contattaci
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -77,22 +96,22 @@ const Header = () => {
         >
           <nav className="flex flex-col items-center space-y-8 w-full px-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
+                to={item.href.startsWith('#') && isHomePage ? item.href.substring(1) : item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contatti"
-              onClick={() => setMobileMenuOpen(false)}
+            <Link
+              to={isHomePage ? "#contatti" : "/#contatti"}
+              onClick={(e) => handleNavClick(e, isHomePage ? "#contatti" : "/#contatti")}
               className="btn-gold mt-4 w-full flex justify-center"
             >
               Contattaci
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
