@@ -93,7 +93,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="z-50">
+        <Link to="/" className="z-50 relative">
           <h1 className="font-playfair text-2xl font-bold text-gold-dark">Ravalli</h1>
         </Link>
 
@@ -121,7 +121,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-slate-800 focus:outline-none z-50"
+          className="md:hidden text-slate-800 focus:outline-none z-50 relative"
           aria-label={mobileMenuOpen ? 'Chiudi menu' : 'Apri menu'}
         >
           {mobileMenuOpen ? (
@@ -131,36 +131,35 @@ const Header = () => {
           )}
         </button>
 
-        {/* Mobile Menu Overlay - Fixed positioning and improved styles */}
-        <div
-          className={cn(
-            'fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out md:hidden',
-            mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-          )}
-          aria-hidden={!mobileMenuOpen}
-        >
-          <div className="flex flex-col items-center justify-center h-full">
-            <nav className="flex flex-col items-center space-y-8 w-full px-8">
-              {navItems.map((item) => (
+        {/* Completely revised Mobile Menu Overlay */}
+        {mobileMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-white z-40 flex flex-col md:hidden"
+            aria-hidden={!mobileMenuOpen}
+          >
+            <div className="flex flex-col items-center justify-center min-h-screen py-16">
+              <nav className="flex flex-col items-center space-y-8 w-full">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href + item.section}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item)}
+                    className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
                 <a
-                  key={item.href + item.section}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item)}
-                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                  href="/#contatti"
+                  onClick={handleContactClick}
+                  className="btn-gold mt-8 px-8 py-3 text-lg"
                 >
-                  {item.label}
+                  Contattaci
                 </a>
-              ))}
-              <a
-                href="/#contatti"
-                onClick={handleContactClick}
-                className="btn-gold mt-6 w-3/4 flex justify-center"
-              >
-                Contattaci
-              </a>
-            </nav>
+              </nav>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );
