@@ -131,32 +131,35 @@ const Header = () => {
           )}
         </button>
 
-        {/* Mobile Menu Overlay - Improved visibility and interaction */}
+        {/* Mobile Menu Overlay - Fixed positioning and improved styles */}
         <div
           className={cn(
-            'fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden',
+            'fixed inset-0 bg-white z-40 transition-all duration-300 ease-in-out md:hidden',
             mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           )}
+          aria-hidden={!mobileMenuOpen}
         >
-          <nav className="flex flex-col items-center space-y-8 w-full px-8 py-16">
-            {navItems.map((item) => (
+          <div className="flex flex-col items-center justify-center h-full">
+            <nav className="flex flex-col items-center space-y-8 w-full px-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.href + item.section}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item)}
+                  className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={item.href + item.section}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item)}
-                className="text-slate-800 hover:text-gold text-2xl font-playfair font-medium transition-colors"
+                href="/#contatti"
+                onClick={handleContactClick}
+                className="btn-gold mt-6 w-3/4 flex justify-center"
               >
-                {item.label}
+                Contattaci
               </a>
-            ))}
-            <a
-              href="/#contatti"
-              onClick={handleContactClick}
-              className="btn-gold mt-4 w-3/4 flex justify-center"
-            >
-              Contattaci
-            </a>
-          </nav>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
