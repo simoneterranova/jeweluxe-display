@@ -31,8 +31,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-navy">
       <Header />
-      <Hero />
-      <ProductShowcase />
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="collezione">
+        <ProductShowcase />
+      </section>
       <section id="chi-siamo">
         <About />
       </section>
