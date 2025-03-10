@@ -71,6 +71,19 @@ const Header = () => {
     }
   };
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header 
       className={cn(
@@ -118,14 +131,14 @@ const Header = () => {
           )}
         </button>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Overlay - Improved visibility and interaction */}
         <div
           className={cn(
-            'fixed inset-0 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden',
-            mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+            'fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden',
+            mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           )}
         >
-          <nav className="flex flex-col items-center space-y-8 w-full px-8">
+          <nav className="flex flex-col items-center space-y-8 w-full px-8 py-16">
             {navItems.map((item) => (
               <a
                 key={item.href + item.section}
@@ -139,7 +152,7 @@ const Header = () => {
             <a
               href="/#contatti"
               onClick={handleContactClick}
-              className="btn-gold mt-4 w-full flex justify-center"
+              className="btn-gold mt-4 w-3/4 flex justify-center"
             >
               Contattaci
             </a>
