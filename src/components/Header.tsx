@@ -74,13 +74,13 @@ const Header = () => {
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     }
     
     return () => {
-      document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     };
   }, [mobileMenuOpen]);
 
@@ -131,7 +131,7 @@ const Header = () => {
           )}
         </button>
 
-        {/* Completely revised Mobile Menu Overlay */}
+        {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <div 
             className="fixed inset-0 bg-white z-40 flex flex-col md:hidden"

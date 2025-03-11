@@ -59,6 +59,11 @@
     -moz-osx-font-smoothing: grayscale;
     position: relative;
   }
+  
+  /* Add padding to all sections to prevent header overlap */
+  section {
+    scroll-margin-top: 80px; /* This helps when scrolling to anchor points */
+  }
 
   .glass {
     @apply bg-white/90 backdrop-blur-md border border-gold/20 rounded-lg shadow-md;

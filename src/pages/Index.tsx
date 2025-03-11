@@ -18,8 +18,16 @@ const Index = () => {
       const sectionId = location.state.scrollTo;
       const element = document.getElementById(sectionId);
       if (element) {
+        // Add a delay and adjust for header height
         setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
+          const headerHeight = 80; // Approximate header height
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }, 100);
       }
       
@@ -31,21 +39,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-navy">
       <Header />
-      <section id="home">
-        <Hero />
-      </section>
-      <section id="collezione">
-        <ProductShowcase />
-      </section>
-      <section id="chi-siamo">
-        <About />
-      </section>
-      <section id="testimonial">
-        <Testimonials />
-      </section>
-      <section id="contatti">
-        <Contact />
-      </section>
+      <main>
+        <section id="home" className="pt-16 md:pt-20">
+          <Hero />
+        </section>
+        <section id="collezione">
+          <ProductShowcase />
+        </section>
+        <section id="chi-siamo">
+          <About />
+        </section>
+        <section id="testimonial">
+          <Testimonials />
+        </section>
+        <section id="contatti">
+          <Contact />
+        </section>
+      </main>
       <Footer />
     </div>
   );
