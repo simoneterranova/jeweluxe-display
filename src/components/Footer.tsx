@@ -33,27 +33,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-medium mb-6">Servizi</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Gioielli Personalizzati</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Riparazioni</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Valutazioni</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Consulenza</a>
-              </li>
-              <li>
-                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Incisioni</a>
-              </li>
-            </ul>
-          </div>
 
           {/* Legal */}
           <div>
