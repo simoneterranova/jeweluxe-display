@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Gem, Wrench, FileText, Pen } from 'lucide-react';
+import { Gem, Wrench, FileText, Pen, Compass } from 'lucide-react';
 
 interface ServiceProps {
   icon: React.ReactNode;
@@ -36,6 +36,11 @@ const Servizi = () => {
       description: "Valutazioni accurate e professionali dei tuoi preziosi, con certificazioni che garantiscono l'autenticità e il valore."
     },
     {
+      icon: <Compass className="h-10 w-10" />,
+      title: "Consulenza",
+      description: "Servizio di consulenza personalizzata per aiutarti a scegliere il gioiello perfetto per ogni occasione speciale della tua vita."
+    },
+    {
       icon: <Pen className="h-10 w-10" />,
       title: "Incisioni",
       description: "Personalizza i tuoi gioielli con incisioni artigianali che aggiungono un valore emotivo unico e rendono ogni pezzo speciale."
@@ -48,16 +53,15 @@ const Servizi = () => {
         <h2 className="section-title">I Nostri Servizi</h2>
         <p className="section-subtitle">Eccellenza e cura in ogni dettaglio</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-10">
           {services.map((service, index) => (
             <div 
               key={index} 
               className="transform transition-all duration-300 hover:-translate-y-2"
-              style={{ 
-                animationDelay: `${index * 150}ms`,
-                opacity: 0
-              }}
               data-aos="fade-up"
+              style={{ 
+                animationDelay: `${index * 150}ms`
+              }}
             >
               <ServiceCard {...service} />
             </div>
