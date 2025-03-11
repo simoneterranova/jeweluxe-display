@@ -93,9 +93,13 @@ const Collection = () => {
     ? products 
     : products.filter(product => product.category === activeCategory);
 
-  // Scroll to top when component mounts
+  // Scroll to top when component mounts - this is the critical fix
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant' // Use 'instant' instead of 'smooth' for immediate scroll
+    });
   }, []);
 
   // Animation on page load

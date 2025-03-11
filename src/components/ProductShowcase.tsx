@@ -1,10 +1,11 @@
 
 import React, { useRef, useEffect } from 'react';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ProductShowcase = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   // Products data
   const products = [
@@ -51,6 +52,12 @@ const ProductShowcase = () => {
         behavior: 'smooth'
       });
     }
+  };
+
+  // Handle navigation to collection page
+  const handleNavigateToCollection = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/collection');
   };
 
   // Intersection Observer for animation
@@ -151,9 +158,12 @@ const ProductShowcase = () => {
         </div>
 
         <div className="text-center mt-10">
-          <Link to="/collection" className="btn-gold">
+          <button 
+            onClick={handleNavigateToCollection}
+            className="btn-gold"
+          >
             Visualizza Tutta la Collezione
-          </Link>
+          </button>
         </div>
       </div>
     </section>
