@@ -34,7 +34,25 @@ const Footer = () => {
           </div>
 
 
-          
+          {/* Legal */}
+          <div>
+            <h4 className="text-white font-medium mb-6">Legali</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Termini e Condizioni</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Cookie Policy</a>
+              </li>
+              <li>
+                <a href="#" className="text-white/90 hover:text-gold transition-colors text-sm">Shipping Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         {/* Bottom footer */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
