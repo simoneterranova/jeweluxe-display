@@ -37,7 +37,7 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/prova3.png')",
+        backgroundImage: "url('/prova2.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
