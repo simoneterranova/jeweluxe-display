@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -20,11 +19,11 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Updated nav items without the redundant "Contatti"
   const navItems = [
     { label: 'Home', href: '/', section: 'home' },
     { label: 'Collezione', href: '/collection', section: 'collezione' },
     { label: 'Chi Siamo', href: '/', section: 'chi-siamo' },
+    { label: 'Servizi', href: '/', section: 'servizi' },
     { label: 'Testimonial', href: '/', section: 'testimonial' },
   ];
 
@@ -32,20 +31,16 @@ const Header = () => {
     e.preventDefault();
     
     if (item.href === '/' && isHomePage) {
-      // If we're already on the homepage, just scroll to the section
       const element = document.getElementById(item.section);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else if (item.href === '/' && !isHomePage) {
-      // If we're on another page and need to go to homepage + scroll
       navigate('/', { state: { scrollTo: item.section } });
     } else {
-      // For regular page navigation with no scrolling (like to /collection)
       navigate(item.href);
     }
     
-    // Close mobile menu if open
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
@@ -55,23 +50,19 @@ const Header = () => {
     e.preventDefault();
     
     if (isHomePage) {
-      // If we're on homepage, just scroll to the contacts section
       const element = document.getElementById('contatti');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // If we're elsewhere, navigate to homepage and then scroll
       navigate('/', { state: { scrollTo: 'contatti' } });
     }
     
-    // Close mobile menu if open
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
   };
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.classList.add('menu-open');
@@ -88,19 +79,16 @@ const Header = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 md:px-8 w-full',
-        // Always have a background color, but make it more prominent when scrolled
         isScrolled 
           ? 'py-3 bg-white shadow-lg' 
           : 'py-4 bg-white/95 backdrop-blur-sm'
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
-        {/* Logo */}
         <Link to="/" className="z-50 relative">
           <h1 className="font-playfair text-2xl font-bold text-gold-dark">Ravalli</h1>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 items-center">
           {navItems.map((item) => (
             <a
@@ -121,7 +109,6 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-slate-800 focus:outline-none z-50 relative"
@@ -134,7 +121,6 @@ const Header = () => {
           )}
         </button>
 
-        {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <div 
             className="fixed inset-0 bg-white z-40 flex flex-col md:hidden"
