@@ -18,16 +18,10 @@ const Index = () => {
       const sectionId = location.state.scrollTo;
       const element = document.getElementById(sectionId);
       if (element) {
-        // Add a delay and adjust for header height
+        // Add a delay to ensure DOM is fully loaded
         setTimeout(() => {
-          const headerHeight = 80; // Approximate header height
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+          // Use the scroll-margin-top value set in CSS
+          element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
       
@@ -40,7 +34,7 @@ const Index = () => {
     <div className="min-h-screen bg-navy">
       <Header />
       <main>
-        <section id="home" className="pt-16 md:pt-20">
+        <section id="home">
           <Hero />
         </section>
         <section id="collezione">
