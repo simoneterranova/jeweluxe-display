@@ -1,69 +1,125 @@
-# Welcome to your Lovable project
+# Jeweluxe Display - Modern Goldsmith Website
 
-## Project info
+A sophisticated goldsmith website built with modern web technologies, featuring an elegant UI design and seamless user experience for showcasing jewelry collections and services.
 
-**URL**: https://lovable.dev/projects/8ae93a8e-228d-4703-a1b3-94f5a6a7be95
+## Technology Stack
 
-## How can I edit this code?
+This project leverages cutting-edge technologies:
 
-There are several ways of editing your application.
+- **React 18** - For building a dynamic and responsive user interface
+- **TypeScript** - For type-safe development
+- **Vite** - For fast development and optimized builds
+- **Tailwind CSS** - For utility-first styling
+- **shadcn/ui** - For beautiful and accessible UI components
+- **Lucide Icons** - For high-quality icons
+- **React Router DOM** - For client-side routing
 
-**Use Lovable**
+## Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8ae93a8e-228d-4703-a1b3-94f5a6a7be95) and start prompting.
+- 🎨 Modern and elegant UI design
+- 💎 Interactive product showcase
+- 🛠️ Comprehensive service section
+- 📱 Fully responsive layout
+- ✨ Smooth animations and transitions
+- 👥 About us section with company values
+- 📞 Contact form integration
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```
+src/
+  ├── components/     # React components
+  ├── pages/          # Page components
+  ├── hooks/          # Custom React hooks
+  ├── lib/            # Utility functions
+  └── App.tsx         # Main application component
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone the repository:
+```bash
+git clone <repository-url>
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Navigate to the project directory:
+```bash
+cd jeweluxe-display
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Development Guidelines
 
-## What technologies are used for this project?
+### Component Structure
 
-This project is built with .
+- Components are organized in the `src/components` directory
+- Each component follows a modular structure
+- UI components utilize shadcn/ui for consistent styling
+- Custom hooks are stored in `src/hooks`
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Styling
 
-## How can I deploy this project?
+- Tailwind CSS is used for styling
+- Custom utility classes are defined in `src/index.css`
+- The project uses a custom color palette with gold and cream themes
 
-Simply open [Lovable](https://lovable.dev/projects/8ae93a8e-228d-4703-a1b3-94f5a6a7be95) and click on Share -> Publish.
+### TypeScript
 
-## I want to use a custom domain - is that possible?
+- Strict type checking is enabled
+- Type definitions are included for all components
+- Custom types are defined where necessary
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Deployment
+
+The project can be deployed using any static hosting service. To build for production:
+
+1. Run the build command:
+```bash
+npm run build
+```
+
+2. The built files will be in the `dist` directory
+
+3. Deploy the contents of the `dist` directory to your hosting service
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## License
+
+This project is proprietary software. All rights reserved.
+
+## Support
+
+For support, please contact the development team or raise an issue in the repository.
