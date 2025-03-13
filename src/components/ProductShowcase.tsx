@@ -124,16 +124,9 @@ const ProductShowcase = () => {
                     <h3 className="font-playfair text-xl font-semibold text-slate-800 mb-2">
                       {product.name}
                     </h3>
-                    <p className="text-slate-700 text-sm mb-4">
+                    <p className="text-slate-700 text-sm">
                       {product.description}
                     </p>
-                    <a 
-                      href="#" 
-                      className="inline-flex items-center text-gold hover:text-gold-light transition-colors text-sm font-medium"
-                    >
-                      Dettagli
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
                   </div>
                 </div>
               </div>

@@ -37,76 +37,24 @@ const Contact = () => {
           <p className="section-subtitle">Siamo qui per rispondere alle tue domande</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-          <div 
-            ref={formRef} 
-            className="glass p-8 rounded-2xl transition-opacity duration-500"
-          >
-            <h3 className="font-playfair text-2xl text-slate-800 mb-6">Inviaci un messaggio</h3>
-            <form className="space-y-6">
-              <div className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-slate-700 text-sm mb-1">Nome</label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
-                      placeholder="Il tuo nome"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-slate-700 text-sm mb-1">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
-                      placeholder="La tua email"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-slate-700 text-sm mb-1">Oggetto</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
-                    placeholder="Oggetto del messaggio"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-slate-700 text-sm mb-1">Messaggio</label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className="w-full bg-white/80 border border-gold/20 focus:border-gold rounded-md p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold/50 transition-all"
-                    placeholder="Il tuo messaggio..."
-                  ></textarea>
-                </div>
-              </div>
-              <button
-                type="submit"
-                className="btn-gold w-full flex items-center justify-center"
-              >
-                Invia Messaggio
-                <Send className="ml-2 h-4 w-4" />
-              </button>
-            </form>
-          </div>
-
+        <div className="max-w-5xl mx-auto">
           <div 
             ref={addressRef} 
-            className="flex flex-col justify-between transition-opacity duration-500"
+            className="grid md:grid-cols-2 gap-10 transition-opacity duration-500"
           >
-            <div>
-              <h3 className="font-playfair text-2xl text-slate-800 mb-6">Informazioni di Contatto</h3>
+            {/* Contact Information Column */}
+            <div className="glass p-8 rounded-xl border border-gold/10 shadow-md">
+              <h3 className="font-playfair text-2xl text-slate-800 mb-6 flex items-center">
+                <Mail className="h-6 w-6 text-gold mr-3" />
+                <span>Informazioni di Contatto</span>
+              </h3>
               <p className="text-slate-700 mb-8">
                 Siamo lieti di assistere personalmente ogni cliente. Non esitare a contattarci 
                 per qualsiasi informazione o per fissare un appuntamento per una consulenza personalizzata.
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-start">
+                <div className="flex items-start hover:bg-cream-dark/30 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 mt-1">
                     <a 
                       href="https://www.google.com/maps?q=Via+Pellico+Silvio,+2,+97013+COMISO+RG" 
@@ -122,14 +70,14 @@ const Contact = () => {
                       href="https://www.google.com/maps?q=Via+Pellico+Silvio,+2,+97013+COMISO+RG" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-slate-700"
+                      className="text-slate-700 hover:text-gold transition-colors"
                     >
                       Via Pellico Silvio, 2, 97013 COMISO (RG)
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start hover:bg-cream-dark/30 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 mt-1">
                     <a href="tel:0932723553">
                       <Phone className="h-5 w-5 text-gold" />
@@ -137,11 +85,11 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Telefono</h4>
-                    <a href="tel:0932723553" className="text-slate-700">0932 723553</a>
+                    <a href="tel:0932723553" className="text-slate-700 hover:text-gold transition-colors">0932 723553</a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start hover:bg-cream-dark/30 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 mt-1">
                     <a href="mailto:info@ravalli-gioielli.it">
                       <Mail className="h-5 w-5 text-gold" />
@@ -149,38 +97,58 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Email</h4>
-                    <a href="mailto:info@ravalli-gioielli.it" className="text-slate-700">info@ravalli-gioielli.it</a>
+                    <a href="mailto:info@ravalli-gioielli.it" className="text-slate-700 hover:text-gold transition-colors">info@ravalli-gioielli.it</a>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start hover:bg-cream-dark/30 p-3 rounded-lg transition-colors">
                   <div className="flex-shrink-0 mt-1">
                     <Clock className="h-5 w-5 text-gold" />
                   </div>
                   <div className="ml-4">
                     <h4 className="text-slate-800 font-medium">Orari di Apertura</h4>
-                    <p className="text-slate-700">
-                      Lun - Ven: 9:00 - 13:00, 16:00 - 20:00<br />
-                      Sabato: 9:00 - 13:00, 16:00 - 19:00<br />
-                      Domenica: Chiuso
-                    </p>
+                    <div className="text-slate-700 space-y-1">
+                      <p className="flex justify-between gap-4">
+                        <span className="font-medium min-w-[90px]">Lun - Ven:</span>
+                        <span>9:00 - 13:00, 16:00 - 20:00</span>
+                      </p>
+                      <p className="flex justify-between">
+                        <span className="font-medium">Sabato:</span>
+                        <span>Chiuso</span>
+                      </p>
+                      <p className="flex justify-between">
+                        <span className="font-medium">Domenica:</span>
+                        <span>Chiuso</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="glass mt-12 p-4 rounded-xl overflow-hidden h-[300px] shadow-lg border border-gold/10">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.6570374103053!2d14.602901975586835!3d36.946361972205686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311a3a970415555%3A0x974aaae6f52c6794!2sVia%20Silvio%20Pellico%2C%202%2C%2097013%20Comiso%20RG!5e0!3m2!1sit!2sit!4v1741374345416!5m2!1sit!2sit" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Posizione Ravalli Gioielli"
-                className="rounded-lg"
-              />
+            {/* Map Column */}
+            <div className="flex flex-col">
+              <div className="glass p-8 rounded-xl border border-gold/10 shadow-md mb-6">
+                <h3 className="font-playfair text-2xl text-slate-800 mb-4 flex items-center">
+                  <MapPin className="h-6 w-6 text-gold mr-3" />
+                  <span>Dove Trovarci</span>
+                </h3>
+                <p className="text-slate-700 mb-2">Vieni a trovarci nel nostro laboratorio nel centro di Comiso.</p>
+              </div>
+              
+              <div className="glass p-4 rounded-xl overflow-hidden flex-grow shadow-lg border border-gold/10">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.6570374103053!2d14.602901975586835!3d36.946361972205686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311a3a970415555%3A0x974aaae6f52c6794!2sVia%20Silvio%20Pellico%2C%202%2C%2097013%20Comiso%20RG!5e0!3m2!1sit!2sit!4v1741374345416!5m2!1sit!2sit" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, minHeight: '300px' }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Posizione Ravalli Gioielli"
+                  className="rounded-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
